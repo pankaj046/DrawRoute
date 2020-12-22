@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity" >
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        map:cardElevation="2dp"
+        map:cardBackgroundColor="#F4F4F4"
+        android:layout_margin="@dimen/search_margin"
+        map:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:maxLines="1"
+                android:id="@+id/search_result"
+                android:focusable="true"
+                android:clickable="true"
+                android:singleLine="true"
+                android:layout_toStartOf="@id/mode"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:background="@android:color/transparent"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_drive_24dp"
+                android:padding="13dp"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/mode"/>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/drawRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_baseline_directions_24"
+        android:layout_margin="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

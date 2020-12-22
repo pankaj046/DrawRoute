@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Drawing Route</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="key_main"><!--place your google map key --></string>
+    <string name="driving">Driving</string>
+    <string name="walking">Walking</string>
+    <string name="bicycling">Bicycling</string>
+    <string name="transport">Transport</string>
+
+</resources>

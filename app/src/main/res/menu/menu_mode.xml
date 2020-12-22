@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/drive"
+        android:icon="@drawable/ic_drive_24dp"
+        android:title="@string/driving" />
+    <item
+        android:id="@+id/walk"
+        android:icon="@drawable/ic_walk_24dp"
+        android:title="@string/walking" />
+    <item
+        android:id="@+id/bicycle"
+        android:icon="@drawable/ic_bike_24dp"
+        android:visible="false"
+        android:title="@string/bicycling" />
+    <item
+        android:id="@+id/transit"
+        android:icon="@drawable/ic_transit_24dp"
+        android:visible="false"
+        android:title="@string/transport" />
+</menu>
